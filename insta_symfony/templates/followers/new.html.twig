@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Followers{% endblock %}
+
+{% block body %}
+    <h1>Create new Followers</h1>
+
+    {{ include('followers/_form.html.twig') }}
+
+    <a href="{{ path('followers_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HashtagPosts index{% endblock %}
+
+{% block body %}
+    <h1>HashtagPosts index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Id_hashtag</th>
+                <th>Id_posts</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hashtag_post in hashtag_posts %}
+            <tr>
+                <td>{{ hashtag_post.id }}</td>
+                <td>{{ hashtag_post.idHashtag }}</td>
+                <td>{{ hashtag_post.idPosts }}</td>
+                <td>
+                    <a href="{{ path('hashtag_posts_show', {'id': hashtag_post.id}) }}">show</a>
+                    <a href="{{ path('hashtag_posts_edit', {'id': hashtag_post.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('hashtag_posts_new') }}">Create new</a>
+{% endblock %}
