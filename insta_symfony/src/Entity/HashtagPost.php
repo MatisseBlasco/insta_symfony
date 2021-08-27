@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\CommentsRepository;
+use App\Repository\HashtagPostRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=CommentsRepository::class)
+ * @ORM\Entity(repositoryClass=HashtagPostRepository::class)
  */
-class Comments
+class HashtagPost
 {
     /**
      * @ORM\Id

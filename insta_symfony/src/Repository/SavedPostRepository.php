@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\SavecPosts;
+use App\Entity\SavedPost;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method SavecPosts|null find($id, $lockMode = null, $lockVersion = null)
- * @method SavecPosts|null findOneBy(array $criteria, array $orderBy = null)
- * @method SavecPosts[]    findAll()
- * @method SavecPosts[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method SavedPost|null find($id, $lockMode = null, $lockVersion = null)
+ * @method SavedPost|null findOneBy(array $criteria, array $orderBy = null)
+ * @method SavedPost[]    findAll()
+ * @method SavedPost[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class SavecPostsRepository extends ServiceEntityRepository
+class SavedPostRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, SavecPosts::class);
+        parent::__construct($registry, SavedPost::class);
     }
 
     // /**
-    //  * @return SavecPosts[] Returns an array of SavecPosts objects
+    //  * @return SavedPost[] Returns an array of SavedPost objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class SavecPostsRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?SavecPosts
+    public function findOneBySomeField($value): ?SavedPost
     {
         return $this->createQueryBuilder('s')
             ->andWhere('s.exampleField = :val')
