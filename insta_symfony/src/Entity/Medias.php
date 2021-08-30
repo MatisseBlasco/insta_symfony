@@ -17,8 +17,25 @@ class Medias
      */
     private $id;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Post::class, inversedBy="medias")
+     */
+    private $posts;
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getPosts(): ?Post
+    {
+        return $this->posts;
+    }
+
+    public function setPosts(?Post $posts): self
+    {
+        $this->posts = $posts;
+
+        return $this;
     }
 }

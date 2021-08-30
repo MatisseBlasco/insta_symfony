@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<title>Edit HashtagPost</title>
+
+{% block body %}
+    <h1>Edit HashtagPost</h1>
+
+    {{ include('hashtag_post/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('hashtag_post_index') }}">back to list</a>
+
+    {{ include('hashtag_post/_delete_form.html.twig') }}
+{% endblock %}

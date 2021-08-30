@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<title>HashtagPost index</title>
+
+{% block body %}
+    <h1>HashtagPost index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hashtag_post in hashtag_posts %}
+            <tr>
+                <td>{{ hashtag_post.id }}</td>
+                <td>
+                    <a href="{{ path('hashtag_post_show', {'id': hashtag_post.id}) }}">show</a>
+                    <a href="{{ path('hashtag_post_edit', {'id': hashtag_post.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('hashtag_post_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<title>SavedPost index</title>
+
+{% block body %}
+    <h1>SavedPost index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for saved_post in saved_posts %}
+            <tr>
+                <td>{{ saved_post.id }}</td>
+                <td>
+                    <a href="{{ path('saved_post_show', {'id': saved_post.id}) }}">show</a>
+                    <a href="{{ path('saved_post_edit', {'id': saved_post.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('saved_post_new') }}">Create new</a>
+{% endblock %}

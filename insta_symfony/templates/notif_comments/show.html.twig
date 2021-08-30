@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<title>NotifComments</title>
+
+{% block body %}
+    <h1>NotifComments</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ notif_comment.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('notif_comments_index') }}">back to list</a>
+
+    <a href="{{ path('notif_comments_edit', {'id': notif_comment.id}) }}">edit</a>
+
+    {{ include('notif_comments/_delete_form.html.twig') }}
+{% endblock %}

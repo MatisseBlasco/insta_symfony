@@ -17,8 +17,25 @@ class Subscription
      */
     private $id;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Users::class, inversedBy="subscription")
+     */
+    private $users;
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getUsers(): ?Users
+    {
+        return $this->users;
+    }
+
+    public function setUsers(?Users $users): self
+    {
+        $this->users = $users;
+
+        return $this;
     }
 }

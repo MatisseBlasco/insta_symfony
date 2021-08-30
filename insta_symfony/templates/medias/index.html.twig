@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<title>Medias index</title>
+
+{% block body %}
+    <h1>Medias index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for media in medias %}
+            <tr>
+                <td>{{ media.id }}</td>
+                <td>
+                    <a href="{{ path('medias_show', {'id': media.id}) }}">show</a>
+                    <a href="{{ path('medias_edit', {'id': media.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('medias_new') }}">Create new</a>
+{% endblock %}

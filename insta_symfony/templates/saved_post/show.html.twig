@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<title>SavedPost</title>
+
+{% block body %}
+    <h1>SavedPost</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ saved_post.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('saved_post_index') }}">back to list</a>
+
+    <a href="{{ path('saved_post_edit', {'id': saved_post.id}) }}">edit</a>
+
+    {{ include('saved_post/_delete_form.html.twig') }}
+{% endblock %}

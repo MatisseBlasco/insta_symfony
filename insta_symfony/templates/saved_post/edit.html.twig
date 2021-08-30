@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<title>Edit SavedPost</title>
+
+{% block body %}
+    <h1>Edit SavedPost</h1>
+
+    {{ include('saved_post/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('saved_post_index') }}">back to list</a>
+
+    {{ include('saved_post/_delete_form.html.twig') }}
+{% endblock %}

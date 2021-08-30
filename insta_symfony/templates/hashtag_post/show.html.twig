@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<title>HashtagPost</title>
+
+{% block body %}
+    <h1>HashtagPost</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ hashtag_post.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('hashtag_post_index') }}">back to list</a>
+
+    <a href="{{ path('hashtag_post_edit', {'id': hashtag_post.id}) }}">edit</a>
+
+    {{ include('hashtag_post/_delete_form.html.twig') }}
+{% endblock %}
