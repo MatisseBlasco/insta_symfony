@@ -26,12 +26,12 @@ class Post
     private $users;
 
     /**
-     * @ORM\OneToMany(targetEntity=comments::class, mappedBy="posts")
+     * @ORM\OneToMany(targetEntity=Comments::class, mappedBy="posts")
      */
     private $comments;
 
     /**
-     * @ORM\OneToMany(targetEntity=medias::class, mappedBy="posts")
+     * @ORM\OneToMany(targetEntity=Medias::class, mappedBy="posts")
      */
     private $medias;
 

@@ -20,17 +20,17 @@ class Users
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity=post::class, mappedBy="users", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Post::class, mappedBy="users", orphanRemoval=true)
      */
     private $posts;
 
     /**
-     * @ORM\OneToMany(targetEntity=notifcomments::class, mappedBy="users")
+     * @ORM\OneToMany(targetEntity=NotifComments::class, mappedBy="users")
      */
     private $notif_comments;
 
     /**
-     * @ORM\OneToMany(targetEntity=subscription::class, mappedBy="users")
+     * @ORM\OneToMany(targetEntity=Subscription::class, mappedBy="users")
      */
     private $subscription;
 

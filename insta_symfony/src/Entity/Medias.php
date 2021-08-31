@@ -18,7 +18,7 @@ class Medias
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Post::class, inversedBy="medias")
+     * @ORM\ManyToOne(targetEntity=Post::class, inversedBy="Medias")
      */
     private $posts;
 
