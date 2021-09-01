@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-
-<title>New Users</title>
+{% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Inscrivez-vous pour voir les photos et vidéos de vos amis.</h1>
 
-    {{ include('users/_form.html.twig') }}
+{{ include('users/_form.html.twig') }}
 
 {% endblock %}
