@@ -1,7 +1,137 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
-* {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 main {
@@ -9,17 +139,19 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 550px;
 }
 
-main .form {
+main .container {
   max-width: 350px;
   margin-top: 12px;
   background-color: white;
+}
+
+main .container .form-register {
   border: 1px solid silver;
 }
 
-main .form .form-register h2 {
+main .container .form-register h2 {
   font-family: "Roboto", sans-serif;
   font-size: 17px;
   color: #8e8e8e;
@@ -29,7 +161,7 @@ main .form .form-register h2 {
   text-align: center;
 }
 
-main .form .form-register .login-fb {
+main .container .form-register .login-fb {
   font-family: "Roboto", sans-serif;
   border: 1px solid transparent;
   background-color: #0095f6;
@@ -45,21 +177,21 @@ main .form .form-register .login-fb {
   justify-content: center;
 }
 
-main .form .form-register .login-fb a {
+main .container .form-register .login-fb a {
   display: flex;
   margin: 0 10px;
   text-decoration: none;
   color: white;
 }
 
-main .form .form-register .login-fb .sprite-logofb {
+main .container .form-register .login-fb .sprite-logofb {
   background: url("../assets/sprite-insta.png") no-repeat -414px -300px;
   width: 16px;
   height: 16px;
   margin: 0 7.5px;
 }
 
-main .form .form-register .or {
+main .container .form-register .or {
   font-family: "Roboto", sans-serif;
   margin: 10px 0;
   font-size: 13px;
@@ -69,14 +201,14 @@ main .form .form-register .or {
   text-transform: uppercase;
 }
 
-main .form .form-register .sprite-logoinsta {
+main .container .form-register .sprite-logoinsta {
   margin: 20px auto;
   background: url("../assets/sprite-insta.png") no-repeat 0 -130px;
   width: 175px;
   height: 51px;
 }
 
-main .form .form-register .input div input {
+main .container .form-register .input div input {
   background-color: whitesmoke;
   border: 1px solid #dbdbdb;
   display: flex;
@@ -86,16 +218,16 @@ main .form .form-register .input div input {
   padding: 5px 7px;
 }
 
-main .form .form-register .input div input::placeholder {
+main .container .form-register .input div input::placeholder {
   font-family: "Roboto", sans-serif;
   color: dimgray;
 }
 
-main .form .form-register .input div label {
+main .container .form-register .input div label {
   display: none;
 }
 
-main .form .form-register .next {
+main .container .form-register .next {
   width: 77%;
   display: flex;
   justify-content: center;
@@ -109,15 +241,66 @@ main .form .form-register .next {
   margin: 10px 30px;
   font-size: 14px;
   line-height: 18px;
-  margin: 8px 0 8px 40px;
+  margin: 14px 0 8px 40px;
 }
 
-main .form .form-register .condition {
+main .container .form-register .condition {
   color: #8e8e8e;
   text-align: center;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   line-height: 16px;
-  margin: 10px 40px;
+  margin: 20px 40px;
+}
+
+main .download {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  line-height: 16px;
+}
+
+main .download .download_sprite {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main .download .download_sprite .sprite-appstore {
+  background: url("../assets/sprite-insta.png") no-repeat -132px -183px;
+  width: 128px;
+  height: 41px;
+}
+
+main .download .download_sprite .sprite-googleplay {
+  background: url("../assets/sprite-insta.png") no-repeat 0 -183px;
+  width: 130px;
+  height: 41px;
+}
+
+main .form-top {
+  display: flex;
+  flex-direction: column;
+}
+
+main .form-bottom {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  line-height: 16px;
+  padding: 15px 0px;
+  margin: 0 0 10px;
+  border-radius: 1px;
+  text-align: center;
+  margin-top: 10px;
+  max-width: 350px;
+  background-color: white;
+  border: 1px solid silver;
+}
+
+main .form-bottom a {
+  list-style: none;
+  text-decoration: none;
+  color: #0095f6;
 }
 /*# sourceMappingURL=style.css.map */

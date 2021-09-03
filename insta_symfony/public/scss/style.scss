@@ -1,24 +1,148 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
 
-//***************************************************REGISTER*************************************************************************************************************************************************************************************************
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-* {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+//***************************************************REGISTER*************************************************************************************************************************************************************************************************
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 550px;
-  .form {
+  .container {
     max-width: 350px;
     margin-top: 12px;
     background-color: white;
-    border: 1px solid rgb(192, 192, 192);
     .form-register {
+      border: 1px solid rgb(192, 192, 192);
       h2 {
         font-family: "Roboto", sans-serif;
         font-size: 17px;
@@ -72,25 +196,25 @@ main {
       }
       .input {
         div {
-			input{
-        background-color: rgb(245, 245, 245);
-        border: 1px solid rgb(219, 219, 219);
-				display: flex;
-				justify-content: center;
-				margin: 7px auto;
-				width: 70%;
-				padding: 5px 7px;
-			}
-      input::placeholder{
-        font-family: "Roboto", sans-serif;
-        color: rgb(105, 105, 105);
-      }
+          input {
+            background-color: rgb(245, 245, 245);
+            border: 1px solid rgb(219, 219, 219);
+            display: flex;
+            justify-content: center;
+            margin: 7px auto;
+            width: 70%;
+            padding: 5px 7px;
+          }
+          input::placeholder {
+            font-family: "Roboto", sans-serif;
+            color: rgb(105, 105, 105);
+          }
           label {
             display: none;
           }
         }
       }
-      .next{
+      .next {
         width: 77%;
         display: flex;
         justify-content: center;
@@ -104,16 +228,60 @@ main {
         margin: 10px 30px;
         font-size: 14px;
         line-height: 18px;
-        margin: 8px 0 8px 40px;
+        margin: 14px 0 8px 40px;
       }
-      .condition{
+      .condition {
         color: #8e8e8e;
         text-align: center;
         font-size: 12px;
         font-family: "Roboto", sans-serif;
         line-height: 16px;
-        margin: 10px 40px;
+        margin: 20px 40px;
       }
+    }
+  }
+  .download {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    line-height: 16px;
+    .download_sprite{
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-evenly;
+      .sprite-appstore {
+        background: url("../assets/sprite-insta.png") no-repeat -132px -183px;
+        width: 128px;
+        height: 41px;
+      }
+      .sprite-googleplay {
+        background: url("../assets/sprite-insta.png") no-repeat 0 -183px;
+        width: 130px;
+        height: 41px;
+      }
+    }
+  }
+  .form-top {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-bottom {
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    line-height: 16px;
+    padding: 15px 0px;
+    margin: 0 0 10px;
+    border-radius: 1px;
+    text-align: center;
+    margin-top: 10px;
+    max-width: 350px;
+    background-color: white;
+    border: 1px solid rgb(192, 192, 192);
+    a {
+      list-style: none;
+      text-decoration: none;
+      color: #0095f6;
     }
   }
 }

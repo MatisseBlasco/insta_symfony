@@ -1,40 +1,51 @@
 {% block formRegister %}
-
 <main>
-  <section class="form">
-    <div class="form-register">
-      <div class="sprite-logoinsta"></div>
+  <div class="container">
+    <div class="form-top">
+      <div class="form-register">
+        <div class="sprite-logoinsta"></div>
+        <h2>
+          Inscrivez-vous pour voir les <br />
+          photos et vidéos de vos amis.
+        </h2>
+        <div class="login-fb"><a href="https://fr-fr.facebook.com/"><div class="sprite-logofb"></div>Se connecter avec Facebook
+          </a>
+        </div>
+        <p class="or">ou</p>
 
-      <h2>Inscrivez-vous pour voir les <br> photos et vidéos de vos amis.</h2>
+          <div class="input">
 
-      <div class="login-fb"><a href="https://fr-fr.facebook.com/">
-          <div class="sprite-logofb"></div> Se connecter avec Facebook
-        </a></div>
+            {{ form_start(form) }}
 
-      <p class="or">ou</p>
+            {{ form_row(form.mail, {'attr': {'placeholder': "E-mail" }}) }}
+            {{ form_row(form.name, {'attr': {'placeholder': "Nom complet" }}) }}
+            {{ form_row(form.username, {'attr': {'placeholder': "Nom d'utilisateur" }}) }}
+            {{ form_row(form.password, {'attr': {'placeholder': "Mot de passe" }}) }}
 
-      {{ form_start(form) }}
+            <button class="next" type="submit">Suivant</button>
 
-      <div class="input">
-        {{ form_row(form.mail, {'attr': {'placeholder': "E-mail" }}) }}
-        {{ form_row(form.name, {'attr': {'placeholder': "Nom complet" }}) }}
-        {{ form_row(form.username, {'attr': {'placeholder': "Nom d'utilisateur"
-        }}) }}
-        {{ form_row(form.password, {'attr': {'placeholder': "Mot de passe" }}) }}
-        <button class="next" type="submit">Suivant</button>
+            {{ form_end(form) }}
+          </div>
+          <p class="condition">
+            En vous inscrivant, vous acceptez nos <b> Conditions générales</b>.
+            Découvrez comment nous recueillons, utilisons et partageons vos
+            données en lisant notre <b>Politique d’utilisation des données</b> et
+            comment nous utilisons les cookies et autres technologies similaires
+            en consultant notre <b>Politique d’utilisation des cookies</b>.
+          </p>
+        </div>
       </div>
-
-
-      <p class="condition">En vous inscrivant, vous acceptez nos <b> Conditions générales</b>. Découvrez comment nous recueillons, utilisons et partageons vos données en lisant notre <b>Politique d’utilisation des données</b> et comment nous utilisons les cookies et autres technologies similaires en consultant notre <b>Politique d’utilisation des cookies</b>.</p>
-
-      <p>Vous avez un compte ? <a href="#">Connectez-vous
-        </a></p>
-
-      <p>Téléchargez l’application.</p>
-
-      {{ form_end(form) }}
+      <div class="form-bottom">
+        <p>Vous avez un compte ? <a href="#">Connectez-vous </a></p>
+      </div>
+      <div class="download">
+        <p>Téléchargez l’application.</p>
+        <div class="download_sprite">
+          <div class="sprite-appstore"></div>
+          <div class="sprite-googleplay"></div>
+        </div>
+      </div>
     </div>
-  </section>
 </main>
-
 {% endblock %}
+
